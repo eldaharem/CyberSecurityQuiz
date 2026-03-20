@@ -251,3 +251,113 @@ h1 {
 .hidden {
     display: none !important;
 }
+
+/* Home Screen & Screen Navigation */
+.screen {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mode-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.menu-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 16px;
+    padding: 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 6px 0 var(--primary-color);
+    transition: all 0.1s ease;
+    text-align: center;
+    position: relative;
+    top: 0;
+}
+
+.menu-btn:active:not(:disabled) {
+    top: 6px;
+    box-shadow: 0 0px 0 transparent;
+}
+
+.menu-btn:disabled {
+    opacity: 0.6;
+    cursor: default;
+    border-color: #d1d1d1;
+    box-shadow: 0 6px 0 #d1d1d1;
+    color: #888;
+}
+
+.data-controls {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.text-btn {
+    background-color: #ffffff;
+    color: #d67c7c;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.06);
+    transition: all 0.1s ease;
+    position: relative;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-btn:active {
+    top: 5px;
+    box-shadow: 0 0px 0 transparent;
+}
+
+/* Quiz Header Controls */
+.quiz-header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-btn {
+    background-color: #ffffff;
+    color: var(--text-color);
+    border: none;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+    transition: all 0.1s ease;
+    position: relative;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.icon-btn:active {
+    top: 4px;
+    box-shadow: 0 0px 0 transparent;
+}
