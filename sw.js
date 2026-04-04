@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sec-quiz-cache-v4';
+const CACHE_NAME = 'sec-quiz-cache-v5';
 const urlsToCache = [
   './',
   './index.html',
@@ -6,7 +6,7 @@ const urlsToCache = [
   './questions.js',
   './app.js',
   './manifest.json',
-  './icon-192.svg'
+  './icon.png'
 ];
 
 self.addEventListener('install', event => {
